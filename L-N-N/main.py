@@ -24,7 +24,7 @@ if __name__ == '__main__':
     for epoch in range(epochs):
         for X, y in get_batch(batch_size, features, labels):
             l = loss(net(X, w, b), y)
-            l.sum().backward()
+            l.sum().backward()  # 求l关于w，b的梯度方向
             sgd([w, b], lr, batch_size)
         with torch.no_grad():
             train_l = loss(net(features, w, b), labels)
