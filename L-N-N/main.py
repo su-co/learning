@@ -8,11 +8,12 @@ from sgd import sgd
 
 if __name__ == '__main__':
     # 生成1k个样本数据
-    true_w = torch.Tensor([2, -3.4])
+    true_w = torch.tensor([2, -3.4])
     true_b = 4.2
     features, labels = generate_data(true_w, true_b, 1000)
 
     # 初始化模型参数
+    # w = torch.tensor([0., 0.], requires_grad=True)  # 如果w是0
     w = torch.normal(0, 0.01, size=(2, 1), requires_grad=True)
     b = torch.zeros(1, requires_grad=True)
 
