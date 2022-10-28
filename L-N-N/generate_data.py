@@ -7,7 +7,7 @@ num代表数量
 
 
 def generate_data(w, b, num):
-    X = torch.normal(0, 1, (num, 2))
+    X = torch.normal(0, 1, (num, len(w)))
     y = torch.matmul(X, w) + b
     y = y + torch.normal(0, 0.01, y.shape)
     return X, y.reshape(-1, 1)
