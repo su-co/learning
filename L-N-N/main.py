@@ -30,3 +30,7 @@ if __name__ == '__main__':
         with torch.no_grad():
             train_l = loss(net(features, w, b), labels)
             print(f'epoch {epoch + 1}, loss {float(train_l.mean()):f}')
+
+    # 显示求得的w，b
+    print(w)
+    print(b)
