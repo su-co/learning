@@ -1,3 +1,4 @@
+"""试图为电压和电流的关系建立一个模型。你能使用自动微分来学习模型的参数吗?"""
 import torch
 
 from generate_data import generate_data
